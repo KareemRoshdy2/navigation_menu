@@ -1,0 +1,79 @@
+:root {
+  --white-color: #fff;
+  --gray-color: #707070;
+  --hover-color: #7070701f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background: url(../bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  position: relative;
+  width: 250px;
+  transition: 0.3s;
+}
+
+nav.open {
+  width: 60px;
+}
+
+.container {
+  width: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--gray-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.icon {
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  border: 2px solid var(--gray-color);
+  border-radius: 10px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.icon:hover,
+nav ul li:hover {
+  background: var(--hover-color);
+}
+
+nav ul li a {
+  color: var(--white-color);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style/simple-line-icons.css" />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>Navigation Menu</title>
+  </head>
+  <body>
+    <nav>
+      <div class="icon">
+        <i class="icon-arrow-left"></i>
+      </div>
+      <div class="container">
+        <ul>
+          <li>
+            <i class="icon-home"></i>
+            <a href="#">home</a>
+          </li>
+          <li>
+            <i class="icon-user"></i>
+            <a href="#">profile</a>
+          </li>
+          <li>
+            <i class="icon-speech"></i>
+            <a href="#">messages</a>
+          </li>
+          <li>
+            <i class="icon-question"></i>
+            <a href="#">help</a>
+          </li>
+          <li>
+            <i class="icon-info"></i>
+            <a href="#">about</a>
+          </li>
+          <li>
+            <i class="icon-settings"></i>
+            <a href="#">settings</a>
+          </li>
+          <li>
+            <i class="icon-logout"></i>
+            <a href="#">logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <script>
+      const nav = document.querySelector("nav");
+      const icon = document.querySelector(".icon");
+      icon.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        icon.querySelector("i").classList.toggle("icon-arrow-right");
+      });
+    </script>
+  </body>
+</html>
